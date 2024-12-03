@@ -8,11 +8,7 @@ type Props = {
 
 export const SettingsLayout = ({ children }: Props) => {
   return (
-    <View
-      style={{
-        flexDirection: "row",
-      }}
-    >
+    <View>
       <Stack.Screen
         options={{
           headerShown: true,

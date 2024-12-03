@@ -1,7 +1,6 @@
-import { ScrollView, useWindowDimensions } from "react-native";
+import { ScrollView, useWindowDimensions, View } from "react-native";
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import ReactNativeModal from "react-native-modal";
-import tw from "@/tailwind";
 
 type Props = {
   children?: React.ReactNode;
@@ -29,16 +28,21 @@ const Modal = forwardRef<ModalHandle, Props>(({ children }: Props, ref) => {
   return (
     <ReactNativeModal
       isVisible={isModalOpen}
-      style={tw.style("m-0 items-center justify-end")}
+      style={{
+        margin: 0,
+        alignContent: "center",
+        justifyContent: "flex-end",
+      }}
     >
+      {/* Replace this with normal View and it works. Or remove the border radius and it works as well */}
       <ScrollView
-        style={tw.style(
-          {
-            flexGrow: 0,
-            width,
-          },
-          "bg-white shadow-lg rounded-t-xl"
-        )}
+        style={{
+          flexGrow: 0,
+          width,
+          backgroundColor: "white",
+          borderTopRightRadius: 12,
+          borderTopLeftRadius: 12,
+        }}
       >
         {children}
       </ScrollView>

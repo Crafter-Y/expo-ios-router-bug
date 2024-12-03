@@ -1,4 +1,4 @@
-import { Button, SafeAreaView, Text } from "react-native";
+import { Button, SafeAreaView, Text, View } from "react-native";
 import React, { useRef } from "react";
 import Modal, { ModalHandle } from "@/components/elements/Modal";
 import { router } from "expo-router";
@@ -8,6 +8,7 @@ export default function BoardScreenScreen() {
 
   return (
     <SafeAreaView>
+      <View style={{ marginTop: 20 }}></View>
       <Button onPress={() => modal.current?.openModal()} title="Open Modal" />
       <Button
         onPress={() => router.push("/settings/")}

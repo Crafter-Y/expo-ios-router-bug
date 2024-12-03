@@ -5,7 +5,6 @@ function DefaultLayout() {
     <Stack
       screenOptions={{
         headerShown: false,
-        gestureEnabled: false,
       }}
     />
   );
