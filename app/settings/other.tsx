@@ -8,7 +8,6 @@ export default function ManagePagesScreen() {
       <Text>Nested page</Text>
 
       {Object.keys(ENTRIES).map((entry) => (
-        // eslint-disable-next-line react-native/no-color-literals
         <Text
           key={entry}
           style={{

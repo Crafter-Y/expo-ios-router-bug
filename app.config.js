@@ -13,16 +13,6 @@ module.exports = {
       supportsTablet: true,
     },
     owner: "crafter_y",
-    plugins: [
-      "expo-router",
-      "expo-localization",
-      [
-        "expo-calendar",
-        {
-          calendarPermission:
-            "Die App benötigt hierfür Zugriff auf den Kalender",
-        },
-      ],
-    ],
+    plugins: ["expo-router"],
   },
 };

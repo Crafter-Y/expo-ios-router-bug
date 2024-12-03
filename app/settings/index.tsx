@@ -11,7 +11,6 @@ export default function BaseSettingsScreen() {
         {Object.keys(ENTRIES).map((entry) => (
           <Pressable
             key={entry}
-            // eslint-disable-next-line react-native/no-color-literals
             style={{
               backgroundColor: "#e2e2e2",
               paddingVertical: 8,
